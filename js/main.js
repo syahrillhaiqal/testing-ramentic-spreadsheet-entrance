@@ -34,17 +34,25 @@ if (collegeName) {
   else if(collegeName==="Gamma") {
     collegeText.classList.add("text-bg-success");
   }
+  else if(collegeName==="Nr") {
+    collegeText.innerHTML = `<i class="bi bi-building"></i> Non-Resident`;
+    collegeText.classList.add("text-bg-warning");
+  }
 }
-
-
 
 function submitForm(event) {
   event.preventDefault(); // prevent normal form submission
+  
+  const form = document.getElementById('myform'); // get the form element
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
 
   // Show the loading animation
   document.getElementById("loadingOverlay").style.display = "flex";
 
-  const form = document.getElementById('myform'); // get the form element
   const data = new FormData(form); // make object of FormData which collect all input from form    
 
   // Update phone number to +60...
@@ -78,4 +86,5 @@ function submitForm(event) {
     swal("Oops!", "Something went wrong: " + error.message, "error");
   });
 }
+  
   
