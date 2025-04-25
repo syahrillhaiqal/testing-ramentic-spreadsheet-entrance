@@ -50,14 +50,14 @@ function submitForm(event) {
     return;
   }
 
+  // Update phone number to +60...
+  const phoneInput = document.getElementById("inputPhoneNum");
+  phoneInput.value = "+60" + phoneInput.value;
+
   // Show the loading animation
   document.getElementById("loadingOverlay").style.display = "flex";
 
   const data = new FormData(form); // make object of FormData which collect all input from form    
-
-  // Update phone number to +60...
-  const phoneInput = document.getElementById("inputPhoneNum");
-  phoneInput.value = "+60" + phoneInput.value;
 
   // Add collegeName manually to form data because currently formdata only have inputs at myform
   if (collegeName) {    
