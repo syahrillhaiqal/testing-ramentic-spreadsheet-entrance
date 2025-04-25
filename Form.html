@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ramentic Spreadsheet Entrance</title>    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+<body>    
+    <!-- Loading overlay -->
+    <div id="loadingOverlay" style="display: none;">
+        <div class="loader"></div>
+    </div>
+
+    <div id="testingText"></div>
+    
+    <div class="card-form">
+        <div class="card p-4 shadow" style="width: 350px;">
+          <h4 class="mb-3 text-center">Ramentic <br> Spreadsheet Form</h4>          
+          <h6 id="collegeDisplay" class="badge col-5 align-self-center"></h6>  
+          <form method="POST" action="https://script.google.com/macros/s/AKfycby_N0tSyhbdxJVWmJsRqEsnXw5LpVjBMr6wMBMFS9oFSd0WFwJZ385ZjUJSC8wgs4fz/exec" id="myform">
+            <div class="mb-3">               
+                <p class="form-label">Name</p>          
+                <input 
+                type="text" 
+                class="form-control" 
+                id="inputName" 
+                name="NAMA"
+                placeholder="Enter name"
+                required>
+            </div>
+            <div class="mb-3">
+                <p class="form-label">Phone number</p>
+                <div class="input-group">                              
+                    <span class="input-group-text">+60</span>
+                    <input 
+                    type="tel" 
+                    class="form-control" 
+                    id="inputPhoneNum" 
+                    name="PHONE NO"        
+                    placeholder="Enter phone number"
+                    oninput="if(this.value.startsWith('0')) this.value = '';"
+                    pattern="[0-9]{9,10}"
+                    maxlength="10"
+                    required>
+                </div>
+            </div>
+            <div class="mb-3">               
+                <p class="form-label">Room number</p>          
+                <input 
+                type="text" 
+                class="form-control" 
+                id="inputRoom" 
+                name="BILIK"
+                placeholder="Enter room number">
+            </div>
+            <div class="mb-3">               
+                <p class="form-label">Method</p>          
+                <select class="form-select" name="PICK UP/DELIVERY" required>                    
+                    <option value="Pickup">Pick up</option>
+                    <option value="Delivery">Delivery</option>                    
+                </select>    
+            </div>        
+            <div class="mb-3">               
+                <p class="form-label">Total price</p>          
+                <input 
+                type="number" 
+                class="form-control" 
+                id="inputPrice" 
+                name="TOTAL PRICE"
+                placeholder="Enter total price"
+                step="0.01"
+                required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mb-3" onclick="submitForm(event)">Submit</button>            
+            <a href="index.html" class="btn btn-outline-secondary w-100">Back</a>
+          </form>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright &#169; 2025 Syahril Haiqal. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

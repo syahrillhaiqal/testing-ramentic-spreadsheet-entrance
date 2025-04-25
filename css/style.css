@@ -1,0 +1,34 @@
+body{    
+    min-height: 100vh;
+    background-color: rgb(68,1,19);
+    background-image: url('../img/ramentic-background.png');
+    background-size: cover;   
+    background-repeat: no-repeat;
+    background-position: center;        
+    /* background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%); */
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 0.5rem;  
+  height: 10vh;
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: center; /* horizontal centering */
+}
+
+footer p {  
+  color: white;
+  margin: 0; /*remove default margin */
+  text-align: center;
+}
+
+#testingText {  
+  text-align: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+  

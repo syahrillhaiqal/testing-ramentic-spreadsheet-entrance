@@ -1,0 +1,31 @@
+@media (max-height: 300px) {
+    footer {
+        position: static !important;
+    }
+}
+
+.container {    
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container-box {    
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;        
+    text-align: center;
+}
+
+.container-box h1 {
+    font-weight: bold;
+    color: #dc3545;
+}
+
+#testingText {  
+    position: absolute;
+    top: 0;
+}
