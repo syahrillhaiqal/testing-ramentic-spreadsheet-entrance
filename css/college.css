@@ -4,6 +4,13 @@
     }
 }
 
+@media (max-height: 790px) {
+    #testingText {
+        position: static !important;
+        height: 5vh;
+    }
+}
+
 .container {    
     height: 80vh;
     display: flex;
