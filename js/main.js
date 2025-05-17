@@ -1,23 +1,3 @@
-// INDICATE THIS CODE IS FOR TESTING
-var isTest = true;
-const testingText = document.getElementById("testingText");
-
-if(isTest) {  
-  testingText.innerHTML = 
-  `
-  <h1 style="color: white;">THIS IS TESTING FORM</h1>
-  <h2><a 
-      href="https://docs.google.com/spreadsheets/d/168CsaHokaIgSv7dvyFdRyhcSSnUD7-kO9ru4Uif8ovg/edit?usp=sharing" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      >Spreadsheet Link</a>
-  </h2>
-  `;  
-}
-else {
-  testingText.style.display = "none";
-}
-
 // Get college name from URL
 const params = new URLSearchParams(window.location.search); // creates a URLSearchParams object that reads everything after the ? in the URL.
 const collegeName = params.get("collegeName");
